@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: cfpyf2meq-java-springboot-gitops
+  description: This is GitOps manifest for cfpyf2meq-java-springboot   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: cfpyf2meq-java-springboot
+    jenkins.io/job-full-name: cfpyf2meq-java-springboot-gitops
+    backstage.io/kubernetes-id: cfpyf2meq-java-springboot 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:cfpyf2meq-java-springboot
